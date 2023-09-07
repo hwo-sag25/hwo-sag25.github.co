@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="output.css" rel="stylesheet">
+  <title>SAG25</title> 
+</head>
+  
+  <body>
+    <main class="bg-delicioso-50 flex">
+      <aside class="relative bg-sidebar h-screen w-80 hidden lg:block shadow-xl bg-electromagnetic-600">
+          <div class="p-6">
+              <a href="index.html" class="text-theme-light text-3xl font-semibold uppercase hover:text-electromagnetic-400">SAG25</a>
+              
+              <!-- <button class="w-full bg-theme-light font-semibold mt-5 rounded-lg shadow-lg hover:shadow-xl hover:bg-electromagnetic-400 hover:text-theme-light flex items-center justify-center"> -->
+              <!--   <a href="/users/sign_up" class="py-2 w-full">Sign Up</a> -->
+              <!-- </button> -->
+          </div>
+
+          <nav class="text-theme-light text-base font-semibold pt-3">
+              <a href="index.html" class="inactive-link">
+                  Home
+              </a>
+              <a href="charter.html" class="inactive-link">
+                  Charter
+              </a>
+              <a href="team.html" class="inactive-link">
+                  Team Members
+              </a>
+              <a href="models.html" class="inactive-link">
+                  Models
+              </a>
+              <a href="meetings.html" class="active-link">
+                  Meetings
+              </a>
+          </nav>
+      </aside> 
+      
+      <div class="relative w-full h-screen overflow-y-hidden flex flex-col">
+        <!-- Mobile Header & Nav -->
+        <header x-data="{ isOpen: false }" class="w-full bg-sidebar py-5 px-6 lg:hidden bg-electromagnetic-600">
+            <div class="flex items-center justify-between">
+                <a href="index.html" class="text-theme-light text-3xl font-semibold uppercase hover:text-electromagnetic-400">SAG25</a>
+                <button @click="isOpen = !isOpen" class="text-theme-light text-3xl focus:outline-none">
+                    <i x-show="!isOpen" class="fas fa-bars"></i>
+                    <i x-show="isOpen" class="fas fa-times"></i>
+                </button>
+            </div>
+
+            <!-- Dropdown Nav -->
+            <nav :class="isOpen ? 'flex': 'hidden'" class="flex flex-col pt-4 text-theme-light text-base font-semibold">
+              <a href="index.html" class="inactive-link">
+                  Home
+              </a>
+              <a href="charter.html" class="inactive-link">
+                  Charter
+              </a>
+              <a href="team.html" class="inactive-link">
+                  Team Members
+              </a>
+              <a href="models.html" class="inactive-link">
+                  Models
+              </a>
+              <a href="meetings.html" class="active-link">
+                  Meetings
+              </a>
+            </nav>
+        </header>
+        
+        <div class="w-full h-screen overflow-x-hidden border-t flex flex-col">
+            <main class="w-full flex-grow p-12">
+              <div class="flex items-center justify-center flex-col"> 
+                  <h1 class="text-3xl p-6 text-center text-electromagnetic-500">SAG25: Meetings</h1>
+                  <p class="text-left text-theme-dark"> Meetings will be held via <a class="text-electromagnetic-500 underline" href="https://jpl.webex.com/jpl/j.php?MTID=md0163567ab8f55d115d55fc7b647cb10">this</a> WebEx link on October 30th, 2023</p>
+              </div>
+            </main>
+        </div>
+
+      </div>
+
+    </main>
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" integrity="sha256-KzZiKy0DWYsnwMF+X1DvQngQ2/FxF7MF3Ff72XcpuPs=" crossorigin="anonymous"></script>
+  </body>
+</html>

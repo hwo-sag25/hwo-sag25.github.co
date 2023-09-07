@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer components {
+    .active-link {
+      @apply flex items-center opacity-100 bg-electromagnetic-600 py-4 pl-6 text-theme-light;
+    }
+
+    .inactive-link {
+        @apply flex items-center text-theme-light opacity-100 hover:bg-electromagnetic-500 py-4 pl-6 focus:bg-electromagnetic-600 active:bg-electromagnetic-600;
+      }
+
+  }
