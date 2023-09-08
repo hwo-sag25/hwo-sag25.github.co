@@ -916,3 +916,22 @@ video {
     display: none;
   }
 }
+
+.models-button {
+  background-image: url('Picture1.png'); 
+}
+
+.meetings-button {
+  background-image: url('webex-logo.png'); 
+  background-position: -1px
+}
+
+.models-button, .meetings-button {
+  background-size: cover; 
+  transform: translate3d(0px, 0px, 0px); 
+  filter: brightness(100%)
+}
+
+.models-button:hover, .meetings-button:hover {
+  filter: brightness(75%)
+}
